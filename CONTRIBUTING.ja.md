@@ -123,6 +123,10 @@ issue テンプレートを使ってください：
 
 バグ報告テンプレートは Hermes / Python / プラグイン / Even App のバージョン、ホスト OS、HTTPS フロントエンドを聞きます — 症状が組み合わせで変わるので、可能なら埋めてください。
 
+## 行動規範
+
+本プロジェクトへの参加は [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md)（英語、[公式日本語訳](https://www.contributor-covenant.org/ja/version/2/1/code_of_conduct/) あり）に従います。貢献にあたってはこの規範に同意することになります。
+
 ## ライセンス
 
 このリポジトリに貢献することで、あなたの貢献が [MIT License](./LICENSE) の下で配布されることに同意することになります。

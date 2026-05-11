@@ -123,6 +123,10 @@ Use the issue templates:
 
 The bug-report template asks for Hermes / Python / plugin / Even App versions, host OS, and the HTTPS front-end in use — please fill these in. Symptoms differ a lot by combination.
 
+## Code of Conduct
+
+Participation in this project is governed by the [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md). By contributing, you agree to abide by its terms.
+
 ## License
 
 By contributing to this repository, you agree that your contributions will be licensed under the [MIT License](./LICENSE).
