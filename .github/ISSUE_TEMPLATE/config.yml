@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: README — setup, configuration, troubleshooting
+    url: https://github.com/kisaragi-mochi/hermes-even-ai-plugin/blob/main/README.md
+    about: Check the README first. Most setup / env var / Even App questions are answered there, including the Troubleshooting section.
+  - name: README (日本語) — セットアップ・設定・トラブルシューティング
+    url: https://github.com/kisaragi-mochi/hermes-even-ai-plugin/blob/main/README.ja.md
+    about: 日本語の README。セットアップ・環境変数・よくある詰まりどころ（401 / 30秒 HUD deadline / Telegram fallback など）はここに書いてあります。
