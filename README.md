@@ -368,6 +368,12 @@ The codebase is small (one `adapter.py`, ~1000 lines) and self-contained. The `t
 
 ---
 
+## Changelog
+
+See [CHANGELOG.md](./CHANGELOG.md) for release history.
+
+---
+
 ## See also
 
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent) — the agent platform this plugs into.
