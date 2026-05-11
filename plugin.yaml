@@ -1,0 +1,66 @@
+name: even-ai-platform
+label: Even AI
+kind: platform
+version: 0.2.0
+description: >
+  Even Realities G2 smart glasses gateway adapter for Hermes Agent.
+  Receives HTTPS POST from the Even App "Add Agent" feature (OpenAI
+  chat-completions wire format), routes the message to a Hermes session
+  keyed by the agent-id header, and replies inline within the 30-second
+  Even AI deadline. Treated as a first-class platform alongside Telegram /
+  Discord / LINE / etc.
+author: kisaragi-mochi
+requires_env:
+  - name: EVEN_AI_AUTH_TOKEN
+    description: "Bearer token the Even App should send (must match the Token entered in Add Agent UI)"
+    prompt: "Even AI bearer token"
+    password: true
+optional_env:
+  - name: EVEN_AI_BIND_HOST
+    description: "Bind address for incoming Even AI POST (default 0.0.0.0)"
+    prompt: "Bind host"
+    password: false
+  - name: EVEN_AI_BIND_PORT
+    description: "Bind port (default 8767)"
+    prompt: "Bind port"
+    password: false
+  - name: EVEN_AI_ALLOWED_AGENT_IDS
+    description: "Comma-separated x-openclaw-agent-id values allowed (default: any)"
+    prompt: "Allowed agent IDs"
+    password: false
+  - name: EVEN_AI_ALLOW_ALL_USERS
+    description: "Allow any agent-id to reach the bot (dev only)"
+    prompt: "Allow all? (true/false)"
+    password: false
+  - name: EVEN_AI_HOME_CHAT_ID
+    description: "Default chat_id for cron / proactive delivery (defaults to even-ai-main)"
+    prompt: "Home chat ID"
+    password: false
+  - name: EVEN_AI_MAX_CHARS
+    description: "Max response chars for G2 display (default 400)"
+    prompt: "Max response chars"
+    password: false
+  - name: EVEN_AI_RESPONSE_TIMEOUT
+    description: "Seconds to wait for the agent reply on the inbound POST before shipping a slow-LLM placeholder (default 28). Overflow replies are then delivered via Telegram fallback. 28s is tuned to sit just below Even App's ~30s HUD-display deadline measured on 2026-05-11; raising it past 30 will cause the HUD to show Even's own 'wait' overlay instead of the real reply."
+    prompt: "Response timeout (seconds)"
+    password: false
+  - name: EVEN_AI_SLOW_PLACEHOLDER
+    description: "Placeholder text returned on the POST when the agent reply exceeds the timeout (default: 考え中… 続きは Telegram に届けるね。)"
+    prompt: "Slow-LLM placeholder text"
+    password: false
+  - name: EVEN_AI_TELEGRAM_FALLBACK
+    description: "Route proactive sends and slow-reply overflow through the Telegram adapter when Even AI cannot deliver (default true). Set to false to drop instead of forwarding."
+    prompt: "Telegram fallback (true/false)"
+    password: false
+  - name: EVEN_AI_TELEGRAM_CHAT_ID
+    description: "Telegram chat_id to use for fallback delivery. Defaults to TELEGRAM_HOME_CHANNEL when unset."
+    prompt: "Telegram fallback chat ID"
+    password: false
+  - name: EVEN_AI_TELEGRAM_FALLBACK_PREFIX
+    description: "Optional prefix prepended to Telegram fallback messages so the user can tell them apart from regular Telegram replies (e.g. '👓 ')."
+    prompt: "Telegram fallback prefix"
+    password: false
+  - name: EVEN_AI_DEBUG_ECHO_DELAY
+    description: "DEBUG: sleep N seconds then return a fixed echo (bypasses the agent). Used to measure Even AI's client-side timeout / retry / disconnect behavior. Set to 0 (default) for normal operation."
+    prompt: "Debug echo delay (seconds)"
+    password: false
