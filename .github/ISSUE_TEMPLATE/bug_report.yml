@@ -1,0 +1,117 @@
+name: Bug report
+description: Report unexpected behavior on Even AI / G2 / Hermes
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please fill in the environment info below so the symptoms can be reproduced quickly.
+
+        日本語で報告したい場合は、別途用意してある「バグ報告 (日本語)」テンプレートを使うこともできます。
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: Plugin version
+      description: From `plugin.yaml` (`version:` field) or the latest tag you checked out.
+      placeholder: "0.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: hermes-version
+    attributes:
+      label: Hermes Agent version
+      description: Output of `hermes --version` or the commit hash you're running.
+      placeholder: "0.13.0"
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      placeholder: "3.11.7"
+    validations:
+      required: true
+
+  - type: input
+    id: even-app-version
+    attributes:
+      label: Even App version (iOS)
+      description: If known. Visible in the App Store or the Even App settings.
+      placeholder: "e.g. 1.5.0"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Host OS running Hermes Gateway
+      options:
+        - macOS
+        - Linux
+        - Other (please describe below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: https-frontend
+    attributes:
+      label: HTTPS front-end in front of port 8767
+      options:
+        - Tailscale Funnel
+        - Cloudflare Tunnel
+        - Caddy
+        - nginx
+        - Other (please describe below)
+        - None / not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: What did you do, in order, to trigger the bug?
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened? Include the HUD message if one appeared.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log excerpt
+      description: |
+        Paste relevant lines from `~/.hermes/logs/agent.log` (or the equivalent Hermes log on your host).
+        **Please redact bearer tokens, chat IDs, hostnames, and any other secrets** before pasting.
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Other context — recent Even App update, unusual `EVEN_AI_*` settings, network specifics, etc.
+    validations:
+      required: false

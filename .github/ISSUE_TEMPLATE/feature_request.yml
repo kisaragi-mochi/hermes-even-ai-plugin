@@ -1,0 +1,43 @@
+name: Feature request
+description: Suggest a new behavior or enhancement
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for sharing the idea. Please answer the questions below so the proposal can be evaluated.
+
+        日本語で提案したい場合は、別途用意してある「機能要望 (日本語)」テンプレートを使うこともできます。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Use case / problem being solved
+      description: What are you trying to do? What's friction in the current behavior?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: What should the plugin do? Be as concrete as possible — env vars, response shape, error handling, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Other approaches you thought about, and why they were not chosen.
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Related Even App / Hermes / G2 details, links to relevant Hermes plugins, etc.
+    validations:
+      required: false

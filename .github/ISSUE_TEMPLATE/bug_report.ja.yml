@@ -1,0 +1,117 @@
+name: バグ報告 (日本語)
+description: Even AI / G2 / Hermes での予期しない挙動を報告する
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        バグ報告ありがとうございます。再現に必要な環境情報を以下に記入してください。
+
+        英語で報告する場合は別途 "Bug report" テンプレートも利用できます。
+
+  - type: input
+    id: plugin-version
+    attributes:
+      label: プラグインのバージョン
+      description: "`plugin.yaml` の `version:` フィールド、または checkout している tag。"
+      placeholder: "0.2.0"
+    validations:
+      required: true
+
+  - type: input
+    id: hermes-version
+    attributes:
+      label: Hermes Agent のバージョン
+      description: "`hermes --version` の出力、または動かしている commit hash。"
+      placeholder: "0.13.0"
+    validations:
+      required: true
+
+  - type: input
+    id: python-version
+    attributes:
+      label: Python バージョン
+      placeholder: "3.11.7"
+    validations:
+      required: true
+
+  - type: input
+    id: even-app-version
+    attributes:
+      label: Even App のバージョン (iOS)
+      description: 分かれば。App Store または Even App の設定画面から確認できます。
+      placeholder: "例: 1.5.0"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Hermes Gateway が動いているホスト OS
+      options:
+        - macOS
+        - Linux
+        - その他 (下で説明)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: https-frontend
+    attributes:
+      label: port 8767 を覆っている HTTPS フロントエンド
+      options:
+        - Tailscale Funnel
+        - Cloudflare Tunnel
+        - Caddy
+        - nginx
+        - その他 (下で説明)
+        - なし / 不明
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: バグを起こすまでに何をしたか、順番に書いてください。
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する挙動
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 実際の挙動
+      description: 何が起きたか。HUD に何か表示されたならその文言も。
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 関連ログ
+      description: |
+        `~/.hermes/logs/agent.log`（または相当する Hermes ログ）から関連箇所を貼ってください。
+        **bearer token / chat_id / ホスト名などの秘密情報は伏字にしてから**貼ってください。
+      render: shell
+    validations:
+      required: false
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: その他
+      description: 他に思い当たること — 最近の Even App アップデート、特殊な `EVEN_AI_*` 設定、ネットワーク事情など。
+    validations:
+      required: false
