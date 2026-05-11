@@ -368,6 +368,12 @@ EVEN_AI_DEBUG_ECHO_DELAY=10  hermes restart
 
 ---
 
+## 変更履歴
+
+リリース履歴は [CHANGELOG.md](./CHANGELOG.md) を参照。
+
+---
+
 ## 関連リンク
 
 - [Hermes Agent](https://github.com/NousResearch/hermes-agent) — このプラグインが組み込まれるエージェントプラットフォーム。
