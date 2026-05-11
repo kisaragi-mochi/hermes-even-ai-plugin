@@ -10,7 +10,7 @@ G2 スマートグラス越しに Hermes エージェントと話せます。約
 
 ---
 
-## なんでこれを作ったか
+## なぜこれを作ったか
 
 Even App には HTTPS URL と bearer token を入れるだけで「Add Agent」できる機能があります。これは G2 の音声入力を OpenAI 互換の chat-completion `POST` リクエストとして転送して、応答を HUD に表示する仕組みです。
 
