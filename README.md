@@ -368,6 +368,12 @@ The codebase is small (one `adapter.py`, ~1000 lines) and self-contained. The `t
 
 ---
 
+## Code of Conduct
+
+Participation in this project is expected to follow the [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md).
+
+---
+
 ## Changelog
 
 See [CHANGELOG.md](./CHANGELOG.md) for release history.

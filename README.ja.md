@@ -368,6 +368,12 @@ EVEN_AI_DEBUG_ECHO_DELAY=10  hermes restart
 
 ---
 
+## 行動規範
+
+本プロジェクトへの参加は [Contributor Covenant Code of Conduct](./CODE_OF_CONDUCT.md)（英語）に従ってください。日本語訳は [公式翻訳](https://www.contributor-covenant.org/ja/version/2/1/code_of_conduct/) を参照できます。
+
+---
+
 ## 変更履歴
 
 リリース履歴は [CHANGELOG.md](./CHANGELOG.md) を参照。
