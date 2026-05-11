@@ -352,7 +352,7 @@ The adapter logs hedged-request detection, TCP disconnect timestamps, and `retry
 
 ## Contributing
 
-Bug reports and PRs welcome — especially:
+Bug reports and PRs welcome — see [CONTRIBUTING.md](./CONTRIBUTING.md) for the full development guide (setup, branch / commit / PR conventions, dual-language sync rule). Especially welcome:
 
 - Measurements on a newer Even App that change the display-deadline number.
 - Linux deployment notes (the plugin should work, but the test rig is macOS).
