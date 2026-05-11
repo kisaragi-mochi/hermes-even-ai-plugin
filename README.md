@@ -4,6 +4,8 @@
 
 Talk to your Hermes agent through G2 smart glasses. Replies under ~28 s land on the HUD inline; longer replies are routed through Telegram so nothing is lost.
 
+> Languages: English | [日本語](./README.ja.md)
+>
 > Status: **alpha** — works on real hardware (Even G2 + Even App + Hermes Agent v0.13.0), but the Even App side of the protocol is undocumented and reverse-engineered. Future Even App updates may break things; bug reports welcome.
 
 ---
