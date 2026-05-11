@@ -352,7 +352,7 @@ EVEN_AI_DEBUG_ECHO_DELAY=10  hermes restart
 
 ## コントリビューション
 
-バグ報告・PR 歓迎です。特に以下：
+バグ報告・PR 歓迎です — 詳しくは [CONTRIBUTING.ja.md](./CONTRIBUTING.ja.md)（セットアップ、ブランチ・コミット・PR の作法、dual-language sync ルール）を参照してください。特に以下：
 
 - 新しい Even App バージョンでの実測値（表示 deadline の数値が変わるパターン）。
 - Linux デプロイの記録（プラグインは動くはずだけど検証環境は macOS）。
