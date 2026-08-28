@@ -285,7 +285,7 @@ class EvenAIAdapter(BasePlatformAdapter):
 
     # ── Lifecycle ─────────────────────────────────────────────────────────
 
-    async def connect(self) -> bool:
+    async def connect(self, *, is_reconnect: bool = False) -> bool:
         if not AIOHTTP_AVAILABLE:
             logger.error("[EvenAI] aiohttp not installed")
             self._set_fatal_error(

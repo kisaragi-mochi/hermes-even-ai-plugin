@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Accept `is_reconnect` keyword argument in `EvenAIAdapter.connect()` so the adapter binds under Hermes Agent v0.19.0+, whose gateway calls `adapter.connect(is_reconnect=...)` on both first-connect and every reconnect. Without this, the adapter raised `TypeError: got an unexpected keyword argument 'is_reconnect'` on every attempt and never bound its HTTP port. ([#16](https://github.com/kisaragi-mochi/hermes-even-ai-plugin/issues/16))
+
 ## [0.2.0] - 2026-05-11
 
 Initial public release of the Even AI Platform Adapter for [Hermes Agent](https://github.com/NousResearch/hermes-agent).
